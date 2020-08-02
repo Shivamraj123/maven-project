@@ -1,4 +1,5 @@
-FROM openjdk:8
-EXPOSE 8080
-ADD target/webapp.war webapp.war
-ENTRYPOINT ["java","-war","/webapp.war"]
+FROM ubuntu:14.04
+	MAINTAINER shivamraj17.com
+	RUN sudo apt-get update
+	RUN sudo apt-get install python -y
+
