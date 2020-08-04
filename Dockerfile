@@ -1,5 +1,5 @@
 FROM tomcat:8.0
-ADD ./webapp/target/*.war /usr/local/tomcat/webapps/
-EXPOSE 8080
-CMD ["catalina.sh", "run"] -y
+MAINTAINER shivamraj17@gmail.com
+COPY ./webapp/target/*.war /usr/local/tomcat/webapps/
+
 
