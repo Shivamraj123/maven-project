@@ -1,5 +1,4 @@
-FROM jenkins/jenkins:lts
-USER root
-RUN apt-get update 
-RUN wget -qo- https://get.docker.com/ | sh 
-RUN apt install docker.io -y
+FROM tomcat:8.0
+ADD ./webapp/target/*.war /usr/local/tomcat/webapps/
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
